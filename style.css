@@ -542,12 +542,17 @@ body.loaded .showcase .text p {
 
 .showcase .social li a {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-left: -9px;
     color: #fff;
-    font-size: 40px;
     transform: scale(0.5);
     transition: 0.5s;
+}
+
+.showcase .social li a .icon-svg-home {
+    width: 40px;       
+    height: 40px;
+    fill: currentColor; 
 }
 
 .showcase .social li a:hover {
@@ -985,6 +990,7 @@ body.loaded .showcase .profile-img-2 img {
     border-bottom: 0.2px solid rgba(131, 131, 131, 1);
     /* transition: 1s; */
     cursor: pointer;
+    gap: 10px;
 }
 
 .service_container .service .service_Title h2 {
@@ -994,16 +1000,23 @@ body.loaded .showcase .profile-img-2 img {
     font-weight: 500;
 }
 
+.service_container .service .service_Title .icon-service {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.service_container .service .service_Title .icon-service.active {
+    transform: rotate(45deg);
+}
+
 .ActiveHeading {
     background: linear-gradient(90deg, #ff7d61 0%, #ffdb59 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.service_container .service .service_Title i {
-    font-size: 2.5rem;
-    color: white;
 }
 
 .service_description {
@@ -1100,9 +1113,9 @@ body.loaded .showcase .profile-img-2 img {
     }
 }
 
-@media (max-width: 386px) {
+@media (max-width: 471px) {
     .ActiveDes {
-        height: 220px;
+        height: 250px;
     }
 
     .service_container .service .service_Title h2 {
@@ -1110,6 +1123,11 @@ body.loaded .showcase .profile-img-2 img {
     }
 }
 
+@media (max-width: 321px) {
+    .ActiveDes {
+        height: 310px;
+    }
+}
 /* END SERVICE SECTION */
 
 /* PROYECTS SECTION */
@@ -1404,6 +1422,12 @@ header.active {
     cursor: pointer;
     z-index: 4;
 }
+.arrows .icon-svg-flecha-derecha,
+.arrows .icon-svg-flecha-izquierda{
+    width: 30px;       
+    height: 30px;
+    fill: currentColor; 
+}
 
 /* left side social */
 .header-wrp .socials {
@@ -1427,6 +1451,18 @@ header.active {
     color: #B3AA91;
 }
 
+.header-wrp .socials a .icon-svg-projects-social {
+    width: 23px;       
+    height: 23px;
+    fill: currentColor; 
+}
+
+.header-wrp .icon-svg-flecha-habilidades{
+    width: 15px;       
+    height: 15px;
+    fill: currentColor; 
+}
+
 /* skills link */
 .arrowDown {
     display: flex;          
@@ -1443,10 +1479,6 @@ header.active {
 
 .arrowDown:hover {
     color: var(--white-clr);
-}
-
-.arrowDown i {
-    padding: 1rem;
 }
 
 /* RESPONSIVE PROYECTS SECTION */
@@ -1513,7 +1545,6 @@ header.active {
     align-items: center;
     color: var(--white-clr);
     font-size: 1rem;
-    text-transform: uppercase;
     -webkit-text-stroke: 1.5px;
     -webkit-text-fill-color: transparent;
     width: 100vw;
@@ -1521,8 +1552,10 @@ header.active {
     animation: marquee 10s linear infinite;
 }
 
-.marquee-content img {
-    filter: invert(1);
+.marquee-content .icon-svg-marquee{
+    width: 20px;       
+    height: 20px;
+    fill: currentColor; 
 }
 
 @keyframes marquee {
@@ -1581,6 +1614,12 @@ header.active {
     display: flex;
     align-items: center;
     gap: 7px;
+}
+
+.grid-el .tags span .icon-svg-habilidades{
+    width: 17px;       
+    height: 17px;
+    fill: currentColor; 
 }
 
 .img-wrp {
@@ -1663,7 +1702,7 @@ header.active {
     }
 
     .skills-section .marquee-content span:last-of-type,
-    .skills-section .marquee-content i:last-of-type {
+    .skills-section .marquee-content svg:last-of-type {
         display: none;
     }
 
@@ -1693,8 +1732,7 @@ header.active {
 
 @media screen and (max-width: 400px) {
 
-    .skills-section .marquee-content span:not(:first-of-type),
-    .skills-section .marquee-content i:not(:first-of-type) {
+    .skills-section .marquee-content span.mobile {
         display: none;
     }
 
@@ -1818,42 +1856,3 @@ header.active {
 }
 
 /* END CONTACT SECTION */
-
-
-/* Estilo para los íconos SVG Inline */
-.icon-svg-home {
-    width: 40px;       
-    height: 40px;
-    fill: currentColor; 
-}
-
-.icon-svg-projects-social {
-    width: 23px;       
-    height: 23px;
-    fill: currentColor; 
-}
-
-.icon-svg-flecha-habilidades{
-    width: 15px;       
-    height: 15px;
-    fill: currentColor; 
-}
-
-.icon-svg-flecha-derecha,
-.icon-svg-flecha-izquierda{
-    width: 30px;       
-    height: 30px;
-    fill: currentColor; 
-}
-
-.icon-svg-marquee{
-    width: 20px;       
-    height: 20px;
-    fill: currentColor; 
-}
-
-.icon-svg-habilidades{
-    width: 17px;       
-    height: 17px;
-    fill: currentColor; 
-}

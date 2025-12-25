@@ -119,33 +119,38 @@ window.addEventListener('scroll', scrollActive);
 window.addEventListener('load', scrollActive);
 // FINAL DEL SCROLL SPY / MENU ACTIVO SEGÚN SECCIÓN VISTA
 
-/*  SERVICES SECTION BUTTONS*/
+/* SERVICES SECTION BUTTONS */
 var titles = document.querySelectorAll('.service_Title');
 var service_descriptions = document.querySelectorAll('.service_description');
-var icons = document.querySelectorAll('.ri-add-fill');
+var icons = document.querySelectorAll('.icon-service'); // Asegúrate que tu SVG tenga esta clase
 var Headings = document.querySelectorAll('.service_Title h2');
 
 titles.forEach((title, index) => {
     title.addEventListener('click', () => {
         var isActive = service_descriptions[index].classList.contains('ActiveDes');
 
+        // 1. Reseteamos TODO (cerramos los otros)
         service_descriptions.forEach((desc) => {
-            desc.classList.remove('ActiveDes')
+            desc.classList.remove('ActiveDes');
         });
+        
         icons.forEach((icon) => {
-            icon.classList.remove('ri-close-line');
+            icon.classList.remove('active'); /* Quitamos la rotación a todos */
         });
+        
         Headings.forEach((Heading) => {
             Heading.classList.remove('ActiveHeading');
         });
+
+        // 2. Si el que clickeaste NO estaba activo, lo activamos
         if (!isActive) {
             service_descriptions[index].classList.add('ActiveDes');
-            icons[index].classList.toggle('ri-close-line');
-            Headings[index].classList.toggle('ActiveHeading');
+            icons[index].classList.add('active'); /* Agregamos la rotación al actual */
+            Headings[index].classList.add('ActiveHeading');
         }
     });
 });
-/* END SERVICES SECTION BUTTONS*/
+/* END SERVICES SECTION BUTTONS */
 
 //LLAMAR A GSAP
 gsap.registerPlugin(CustomEase);
