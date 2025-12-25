@@ -440,8 +440,8 @@ function startProgressBar() {
 startProgressBar();
 
 //change slide by arrows click
-let prevArrow = document.querySelector(".arrows .fa-chevron-left"); // Botón anterior
-let nextArrow = document.querySelector(".arrows .fa-chevron-right"); // Botón siguiente
+let prevArrow = document.querySelector(".arrows .icon-svg-flecha-derecha"); // Botón anterior
+let nextArrow = document.querySelector(".arrows .icon-svg-flecha-izquierda"); // Botón siguiente
 prevArrow.addEventListener("click", () => {
     let delta = slide == 1 ? 2 : slide - 1;
     changeSlide(delta);

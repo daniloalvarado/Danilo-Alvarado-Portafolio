@@ -1399,11 +1399,10 @@ header.active {
     position: absolute;
     bottom: 10%;
     right: 10%;
-    /* display: flex; */
-    gap: 10;
+    display: flex;
+    gap: 15px;
     cursor: pointer;
     z-index: 4;
-    font-size: 30px;
 }
 
 /* left side social */
@@ -1420,7 +1419,6 @@ header.active {
 .header-wrp .socials a,
 .arrowDown {
     color: var(--white-clr);
-    font-size: 1.4rem;
     transition: color .3s ease;
     text-decoration: none;
 }
@@ -1431,9 +1429,12 @@ header.active {
 
 /* skills link */
 .arrowDown {
+    display: flex;          
+    align-items: center;    
+    gap: 10px;
     position: absolute;
-    bottom: .4rem;
-    left: 2rem;
+    bottom: 1.5rem;
+    left: 3rem;
     writing-mode: vertical-lr;
     color: #aaa;
     transition: color .3s ease;
@@ -1577,6 +1578,9 @@ header.active {
     padding: .5rem 1rem;
     border: 1px solid white;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
 .img-wrp {
@@ -1817,10 +1821,39 @@ header.active {
 
 
 /* Estilo para los íconos SVG Inline */
-.icon-svg {
+.icon-svg-home {
     width: 40px;       
     height: 40px;
     fill: currentColor; 
-    vertical-align: middle;
-    transition: transform 0.3s ease; 
+}
+
+.icon-svg-projects-social {
+    width: 23px;       
+    height: 23px;
+    fill: currentColor; 
+}
+
+.icon-svg-flecha-habilidades{
+    width: 15px;       
+    height: 15px;
+    fill: currentColor; 
+}
+
+.icon-svg-flecha-derecha,
+.icon-svg-flecha-izquierda{
+    width: 30px;       
+    height: 30px;
+    fill: currentColor; 
+}
+
+.icon-svg-marquee{
+    width: 20px;       
+    height: 20px;
+    fill: currentColor; 
+}
+
+.icon-svg-habilidades{
+    width: 17px;       
+    height: 17px;
+    fill: currentColor; 
 }
