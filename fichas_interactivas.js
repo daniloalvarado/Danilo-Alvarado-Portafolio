@@ -1,4 +1,4 @@
-// FICHAS INTERACTIVAS (SE ACTIVA LACAÍDA CON EL SCROLL)
+// FICHAS INTERACTIVAS (SE ACTIVA LA CAÍDA CON EL SCROLL)
 document.addEventListener("DOMContentLoaded", () => {
     
     // VERIFICACIÓN: Asegurarnos de que Matter.js está cargado
