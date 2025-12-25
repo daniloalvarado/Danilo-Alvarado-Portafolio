@@ -136,7 +136,7 @@ html,
 
 /* CURSOR PARA CERRAR (X) */
 .crossCursor {
-    cursor: url('images/close-2.png'), auto !important;
+    cursor: url('Images/close-2.png'), auto !important;
     z-index: 2;
 }
 
