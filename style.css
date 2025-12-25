@@ -1814,3 +1814,13 @@ header.active {
 }
 
 /* END CONTACT SECTION */
+
+
+/* Estilo para los íconos SVG Inline */
+.icon-svg {
+    width: 40px;       
+    height: 40px;
+    fill: currentColor; 
+    vertical-align: middle;
+    transition: transform 0.3s ease; 
+}
