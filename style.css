@@ -184,7 +184,7 @@ header.nav {
     padding: 20px 100px;
     transition: 0.5s ease;
     /* función? interviene en la animación de carga */
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Fondo negro cuando salga del home section el nav (para el js)*/
@@ -1144,7 +1144,7 @@ body.loaded .showcase .profile-img-2 img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     overflow: hidden;
     max-width: 100vw;
     position: absolute;
