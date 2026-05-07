@@ -618,12 +618,16 @@ document.addEventListener("DOMContentLoaded", () => {
         Composite.add(world, mouseConstraint);
 
         // Volver a agregar los eventos táctiles con lógica condicional para el scroll
+        let isTouchingTag = false;
+
         mouse.element.addEventListener("touchstart", (e) => {
             // Si el usuario toca un tag (chip), dejamos que Matter.js bloquee el scroll para poder arrastrar
             if (e.target.classList.contains('physics-tag')) {
+                isTouchingTag = true;
                 mouse.mousedown(e);
             } else {
                 // Si toca un espacio vacío, anulamos preventDefault temporalmente para permitir scroll
+                isTouchingTag = false;
                 const originalPreventDefault = e.preventDefault.bind(e);
                 e.preventDefault = () => {};
                 mouse.mousedown(e);
@@ -632,8 +636,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: false });
 
         mouse.element.addEventListener("touchmove", (e) => {
-            // Si estamos arrastrando un body (chip), dejamos que bloquee el scroll
-            if (mouseConstraint.body) {
+            // Si el toque inició en un tag, dejamos que bloquee el scroll y lo arrastre
+            if (isTouchingTag) {
                 mouse.mousemove(e);
             } else {
                 const originalPreventDefault = e.preventDefault.bind(e);
@@ -644,6 +648,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: false });
 
         mouse.element.addEventListener("touchend", (e) => {
+            isTouchingTag = false;
             mouse.mouseup(e);
         }, { passive: false });
 
