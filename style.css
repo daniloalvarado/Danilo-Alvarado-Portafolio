@@ -1644,7 +1644,7 @@ header.active {
     position: absolute;
     top: 0;
     left: 0;
-    touch-action: none;
+    /* touch-action: none; Eliminado para permitir scroll en móviles */
     overflow: hidden;
 }
 

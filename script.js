@@ -602,6 +602,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const mouse = Mouse.create(container);
         mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
         mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+        
+        // Desactivar eventos táctiles para permitir el scroll en dispositivos móviles
+        mouse.element.removeEventListener("touchstart", mouse.mousedown);
+        mouse.element.removeEventListener("touchmove", mouse.mousemove);
+        mouse.element.removeEventListener("touchend", mouse.mouseup);
 
         const mouseConstraint = MouseConstraint.create(engine, {
             mouse: mouse,
