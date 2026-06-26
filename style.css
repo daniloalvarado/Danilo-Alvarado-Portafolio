@@ -829,7 +829,7 @@ body.loaded .showcase .profile-img-2 img {
     }
 
     .showcase .social {
-        gap: 20px;
+        gap: 40px;
     }
 
     .showcase .social li a {
@@ -1909,13 +1909,13 @@ body.light-mode {
 }
 
 body.light-mode ::selection {
-    background: #000;
+    background: #cf611a;
     color: #fff;
 }
 
 body.light-mode header.nav.scrolled {
     background-color: rgba(249, 249, 249, 0.9);
-    border-bottom: 1px solid #ddd;
+    border-bottom: none;
 }
 
 body.light-mode header .brand {
@@ -2003,12 +2003,28 @@ body.light-mode .container_services {
     color: #000;
 }
 
+body.light-mode .service_wrapper .title {
+    background: none;
+    -webkit-text-fill-color: #b84c0c;
+    color: #b84c0c;
+}
+
 body.light-mode .service_container .service .service_Title h2 {
     color: #000;
 }
 
+body.light-mode .service_container .service .service_Title h2.ActiveHeading {
+    background: none;
+    -webkit-text-fill-color: #b84c0c;
+    color: #b84c0c;
+}
+
 body.light-mode .service_container .service .service_Title .icon-service {
     fill: #000;
+}
+
+body.light-mode .service_container .service .service_Title .icon-service.active {
+    fill: #b84c0c;
 }
 
 body.light-mode .service_description ul li {
@@ -2109,8 +2125,11 @@ body.light-mode .grid-el .row {
 }
 
 body.light-mode .grid-el .tags span {
-    border-color: #000;
-    color: #000;
+    border-color: #b84c0c !important;
+    color: #b84c0c !important;
+}
+body.light-mode .grid-el .tags span svg {
+    fill: #b84c0c !important;
 }
 
 body.light-mode .physics-tag {
@@ -2180,4 +2199,24 @@ body.light-mode .cursor {
 
 body.light-mode .cursor-follow {
     border-color: #000;
+}
+
+body.light-mode::-webkit-scrollbar-track {
+    border-inline-start: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+body.light-mode::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+}
+
+@media (max-width: 768px) {
+    .preloader-text {
+        color: black;
+        -webkit-text-stroke: 0;
+    }
+    body.light-mode .preloader-text {
+        color: white;
+        -webkit-text-stroke: 0;
+    }
 }
